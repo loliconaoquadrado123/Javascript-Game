@@ -1,4 +1,5 @@
 
 window.onload = ()=>{
-    alert("ola")
+    alert("oi")
+
 }
