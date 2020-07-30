@@ -24,7 +24,7 @@ function frame(){
     tela.drawImage(img,x,y);
     tela.closePath();
     
-    tela.clearRect(0, 0, tela.width,tela.height);
+    tela.clearImage(0, 0, tela.width,tela.height);
     
     
     
@@ -40,7 +40,7 @@ window.addEventListener('keydown',(event)=>{
         case "ArrowUp":
             y+=1;
         case "ArrowDown":
-            y-=1;
+            y-=;
             break;
     } })
 setInterval(frame,1);
