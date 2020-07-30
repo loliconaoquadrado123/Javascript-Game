@@ -1,2 +1,2 @@
-    index.html - O pagina principal.
-    main.js - O script principal.
+    index.html - The HTML Game main page.
+    main.js - The main Script, include the loading script.
