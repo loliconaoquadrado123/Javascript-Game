@@ -7,8 +7,7 @@ tela.style.height = aheight+"px";
 
 
 tela = tela.getContext('2d');
-tela.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
-tela.fillRect(10, 10, 55, 50);
+
 
 //start all images
 
@@ -18,16 +17,31 @@ img.src='player.jpg';
 
 //KEYS
 
-window.addEventListener('keydown',(event)=>{
-    alert(event.key);
-})
-function move(x,y){
-    
-}
-function frame(x,y,id){
-    tela.drawImage(img,x,y);
-    console.log('a')
-}
 x = 10;
 y = 20;
-setInterval(frame(x,y),1000);
+function frame(){
+    tela.beginPath();
+    tela.drawImage(img,x,y);
+    tela.closePath();
+    
+    tela.clearRect(0, 0, tela.width,tela.height);
+    
+    
+    
+}
+window.addEventListener('keydown',(event)=>{
+    switch(event.key){
+        case "ArrowRight":
+            x+=1;
+            break;
+        case "ArrowLeft":
+            x-=1;
+            break;
+        case "ArrowUp":
+            y+=1;
+        case "ArrowDown":
+            y-=1;
+            break;
+    } })
+setInterval(frame,1);
+

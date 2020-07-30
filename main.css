@@ -6,6 +6,7 @@
     width: 100%;
     background-color: black;
 }
-.invisible{
-    display: none;
+#load{
+    width: 100%;
+    background-color:rgba(rgb(158, 1, 1), green, blue, 7);
 }

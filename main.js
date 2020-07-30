@@ -1,5 +1,5 @@
 
-window.onload = ()=>{
-    alert("oi")
+document.onload = ()=>{
+    
 
 }
