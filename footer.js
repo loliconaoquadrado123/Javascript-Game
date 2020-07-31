@@ -31,8 +31,11 @@ img.src='player.jpg';
 //KEYS
 x = 0;
 y = 0;
+function physics(){
+    
+}
 function frame(){
-    physics
+    physics();
     screen2d.clearRect(0,0,tela.width,tela.height);
     screen2d.beginPath();
     screen2d.drawImage(img,x,y);
