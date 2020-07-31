@@ -32,13 +32,11 @@ img.src='player.jpg';
 x = 0;
 y = 0;
 function frame(){
+    physics
     screen2d.clearRect(0,0,tela.width,tela.height);
     screen2d.beginPath();
     screen2d.drawImage(img,x,y);
     screen2d.closePath();
-    
-  
-    
     
     
 }
