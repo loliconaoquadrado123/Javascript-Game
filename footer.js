@@ -53,7 +53,7 @@ window.addEventListener('keydown',(event)=>{
             y-=1;
             break;
         case "ArrowDown":
-            y+=;
+            y+=1;
 
             break;
     } })
