@@ -1,7 +1,17 @@
 tela = document.getElementById('tela');
 aheight = window.innerHeight;
 tela.style.height = aheight+"px";
+///Player
+player ={
 
+    cords:{
+        Rx:0,
+        Ry:0,
+        x:0,
+        y:0,
+    },
+    
+};
 
 
 
@@ -16,19 +26,20 @@ img.src='player.jpg';
 //draw all
 
 //KEYS
-
-x = 10;
-y = 20;
+x = 0;
+y = 0;
 function frame(){
+    tela.clearRect(0,0,tela.width,tela.height);
     tela.beginPath();
     tela.drawImage(img,x,y);
     tela.closePath();
     
-    tela.clearImage(0, 0, tela.width,tela.height);
+  
     
     
     
 }
+setInterval(frame,10);
 window.addEventListener('keydown',(event)=>{
     switch(event.key){
         case "ArrowRight":
@@ -38,10 +49,20 @@ window.addEventListener('keydown',(event)=>{
             x-=1;
             break;
         case "ArrowUp":
-            y+=1;
+            
+            y-=1;
+            break;
         case "ArrowDown":
-            y-=;
+            y+=;
+
             break;
     } })
-setInterval(frame,1);
+
+function scroll(){
+    if(player.cords.rX <= 10){
+        
+    }
+}
+
+
 
