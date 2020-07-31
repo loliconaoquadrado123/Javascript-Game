@@ -1,9 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    overflow:hidden;
 }
 #tela{
     width: 100%;
+    
     background-color: black;
 }
 #load{

@@ -1,6 +1,9 @@
-tela = document.getElementById('tela');
-aheight = window.innerHeight;
-tela.style.height = aheight+"px";
+screen = document.getElementById('tela');
+screen2d = screen.getContext('2d');
+screenH = window.innerHeight;
+
+screen.style.height = screenH+"px";
+
 ///Player
 player ={
 
@@ -16,7 +19,7 @@ player ={
 
 
 
-tela = tela.getContext('2d');
+
 
 
 //start all images
@@ -29,10 +32,10 @@ img.src='player.jpg';
 x = 0;
 y = 0;
 function frame(){
-    tela.clearRect(0,0,tela.width,tela.height);
-    tela.beginPath();
-    tela.drawImage(img,x,y);
-    tela.closePath();
+    screen2d.clearRect(0,0,tela.width,tela.height);
+    screen2d.beginPath();
+    screen2d.drawImage(img,x,y);
+    screen2d.closePath();
     
   
     
