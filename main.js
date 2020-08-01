@@ -1,9 +1,9 @@
-    function load(){
-        document.createElement('div').id = 'load';
+function load(){
+        document.createElement('div').setAttribute('id','load');
+
         
-    }
+}
 
 document.onload = ()=>{
-
     load();
 }
