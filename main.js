@@ -35,34 +35,39 @@ function frame() {
     
     
 }
-window.addEventListener('keydown',function(event){
-    old=0;
-    switch(event.keyCode){
-         
-        case 38:
-            old=38;
-            y-=1;
+    window.addEventListener('keydown',function(event){
+        
+        switch(event.keyCode){
+            
+            case 38:
+                
+                y-=1;
 
-             break;
-        case 40:
-            old=40;
+                break;
+            case 40:
+                
                 y+=1;
-    
-            break;
-        case 37:
-            old=37;
+        
+                break;
+            case 37:
+                
+                
                 x-=1;
                 break;
             case 39:
-                old=39;
+                
                 x+=1;
                 break;
-                     
-    }
+                        
+        }
     switch(event.key){
-        case 1:
+        case 'a':
             attack();
             break;
+            case 'b':
+
+                break;
+
     }
     console.log(event.key)
 })
