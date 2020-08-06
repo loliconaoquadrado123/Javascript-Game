@@ -23,9 +23,7 @@ window.addEventListener('load',function(){
     player=new Image();
     player.src='player.jpg';
     img=player;
-    function attack(){
-        alert('ataque');
-    }
+    
 function frame() {
     
     screen2d.clearRect(0, 0, screen.width, screen.height);
@@ -35,41 +33,31 @@ function frame() {
     
     
 }
+
     window.addEventListener('keydown',function(event){
         
-        switch(event.keyCode){
+        
+        switch(event.key){
             
-            case 38:
-                
+            case 'ArrowUp':
+                key = 'arrowUp';
                 y-=1;
-
                 break;
-            case 40:
-                
+            case 'ArrowDown':
+                key = 'arrowDown';
                 y+=1;
         
                 break;
-            case 37:
-                
-                
+            case 'ArrowLeft':
+                key = 'arrowLeft';
                 x-=1;
                 break;
-            case 39:
-                
+            case 'ArrowRight':
+                key = 'arrowRight';
                 x+=1;
                 break;
                         
         }
-    switch(event.key){
-        case 'a':
-            attack();
-            break;
-            case 'b':
-
-                break;
-
-    }
-    console.log(event.key)
 })
 setInterval(frame,10);
 
