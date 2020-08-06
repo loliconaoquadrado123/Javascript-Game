@@ -33,17 +33,28 @@ function frame() {
     
     
 }
-keysPressed=['right'];
+function verify(key){
+    for(i=0;keysPressed[i]==keysPressed.lengh;i++){
+        if(keysPressed[i]=key){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+    
+}
+keysPressed=[];
     window.addEventListener('keydown',function(event){
         
         
         switch(event.key){
             
             case 'ArrowUp':
-                if(keysPressed[0]){
-
-                }
+                
                 key = 'up';
+                if(verify(key)){
+                    keysPressed[].push(key);
+                }
                 y-=1;
                 break;
             case 'ArrowDown':
