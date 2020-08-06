@@ -33,31 +33,40 @@ function frame() {
     
     
 }
-
+keysPressed=['right'];
     window.addEventListener('keydown',function(event){
         
         
         switch(event.key){
             
             case 'ArrowUp':
-                key = 'arrowUp';
+                if(keysPressed[0]){
+
+                }
+                key = 'up';
                 y-=1;
                 break;
             case 'ArrowDown':
-                key = 'arrowDown';
+                key = 'down';
                 y+=1;
         
                 break;
             case 'ArrowLeft':
-                key = 'arrowLeft';
+                key = 'left';
                 x-=1;
                 break;
             case 'ArrowRight':
-                key = 'arrowRight';
+                key = 'right';
                 x+=1;
                 break;
                         
         }
+})
+window.addEventListener('keyup',function(event){
+        for(i = 0;i==keysPressed.lengh;i++){
+            keysPressed[i]=false;
+        }
+
 })
 setInterval(frame,10);
 
