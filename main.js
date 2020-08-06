@@ -23,6 +23,9 @@ window.addEventListener('load',function(){
     player=new Image();
     player.src='player.jpg';
     img=player;
+    function attack(){
+        alert('ataque');
+    }
 function frame() {
     
     screen2d.clearRect(0, 0, screen.width, screen.height);
@@ -33,13 +36,35 @@ function frame() {
     
 }
 window.addEventListener('keydown',function(event){
-    switch(event){
-        case 90:
-            alert('a');
+    old=0;
+    switch(event.keyCode){
+         
+        case 38:
+            old=38;
+            y-=1;
+
+             break;
+        case 40:
+            old=40;
+                y+=1;
+    
             break;
-        
+        case 37:
+            old=37;
+                x-=1;
+                break;
+            case 39:
+                old=39;
+                x+=1;
+                break;
+                     
     }
-    alert(event.keyCode);
+    switch(event.key){
+        case 1:
+            attack();
+            break;
+    }
+    console.log(event.key)
 })
 setInterval(frame,10);
 
